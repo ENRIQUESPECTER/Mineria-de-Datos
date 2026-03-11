@@ -1,5 +1,6 @@
 # Mineria-de-Datos
 EJERCICIOS
+
 Obtén todas las filas del depto "Eng" que además tengan perf_score >= 0.85, pero muestra solo las columnas: emp_id, name, city, perf_score, salary_mxn.
 
 Del DataFrame completo, obtén las filas 3 a 8 (incluyendo 3 y excluyendo 8), y solo las columnas 0, 1, 5 y 6 (por posición).
