@@ -14,7 +14,7 @@ mu0 = 45
 #3) Ejecuta la prueba t de 1 muestra
 res = stats.ttest_1samp(minutos, mu0)#sintaxis para ttest_1samp: ttest_1samp(a,mu0) donde a es la muestra y mu0 es el valor bajo H0
 
-#4) Extrae ek estadustuci t t ek p-value
+#4) Extrae el estadistico t y el p-value
 t_stat = res.statistic
 p_value = res.pvalue
 

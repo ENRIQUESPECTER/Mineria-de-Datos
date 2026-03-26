@@ -9,13 +9,13 @@ antes = np.array([
 
 despues = np.array([
     7,5,6,9,3,8,10,3,12,7,
-    6,11,7,6,8,10,9,8,5,4
+    6,11,7,6,8,10,9,12,7,10
 ])
 
 #2) Ejecuta la prueba t de 1 muestra
-res = stats.ttest_ind(antes,despues)#sintaxis para ttest_1samp: ttest_1samp(a,mu0) donde a es la muestra y mu0 es el valor bajo H0
+res = stats.ttest_rel(antes,despues)#sintaxis para ttest_1samp: ttest_1samp(a,mu0) donde a es la muestra y mu0 es el valor bajo H0
 
-#3) Extrae ek estadustuci t t ek p-value
+#3) Extrae el estadistico t y el p-value
 t_stat = res.statistic
 p_value = res.pvalue
 
@@ -26,6 +26,6 @@ print("t =", t_stat)
 print("p-value =",p_value)
 
 if p_value < alpha:
-    print("Rechaza H0: hay evidencia de que la media es distinta de 70.")
+    print("Rechaza H0: hay evidencia de que una dieta especial reduce los niveles de cortisol despues de 2 meses.")
 else:
-    print("No rechaza H0: No hay evidencia suficiente que demuestre que la media difiere de 70.")
+    print("No rechaza H0: No hay evidencia suficiente que demuestre que dieta especial reduce los niveles de cortisol despues de 2 meses.")
